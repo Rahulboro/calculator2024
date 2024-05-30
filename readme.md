@@ -54,41 +54,49 @@ calculator/
   <body>
     <div class="container">
       <div class="calculator">
-        <input type="text" placeholder="0" id="input-box" />
+        <input type="text" placeholder="0" id="inputBox" />
         <div class="btn">
-          <button class="btn-ac">AC</button>
-          <button class="btn-del">DEL</button>
-          <button class="btn-yellow">%</button>
-          <button class="btn-yellow">/</button>
+          <button onclick="inputBox.value = ''" class="btn-ac">AC</button>
+          <button
+            onclick="inputBox.value = inputBox.value.toString().slice(0, -1)"
+            class="btn-del"
+          >
+            DEL
+          </button>
+          <button onclick="inputBox.value += '%'" class="btn-yellow">%</button>
+          <button onclick="inputBox.value += '/'" class="btn-yellow">/</button>
         </div>
         <div class="btn">
-          <button>7</button>
-          <button>8</button>
-          <button>9</button>
-          <button class="btn-yellow">*</button>
+          <button onclick="inputBox.value += '7'">7</button>
+          <button onclick="inputBox.value += '8'">8</button>
+          <button onclick="inputBox.value += '9'">9</button>
+          <button onclick="inputBox.value += '*'" class="btn-yellow">*</button>
         </div>
         <div class="btn">
-          <button>4</button>
-          <button>5</button>
-          <button>6</button>
-          <button class="btn-yellow">-</button>
+          <button onclick="inputBox.value += '4'">4</button>
+          <button onclick="inputBox.value += '5'">5</button>
+          <button onclick="inputBox.value += '6'">6</button>
+          <button onclick="inputBox.value += '-'" class="btn-yellow">-</button>
         </div>
         <div class="btn">
-          <button>1</button>
-          <button>2</button>
-          <button>3</button>
-          <button class="btn-yellow">+</button>
+          <button onclick="inputBox.value += '1'">1</button>
+          <button onclick="inputBox.value += '2'">2</button>
+          <button onclick="inputBox.value += '3'">3</button>
+          <button onclick="inputBox.value += '+'" class="btn-yellow">+</button>
         </div>
         <div class="btn">
-          <button>00</button>
-          <button>0</button>
-          <button>.</button>
-          <button class="btn-grey">=</button>
+          <button onclick="inputBox.value += '00'">00</button>
+          <button onclick="inputBox.value += '0'">0</button>
+          <button onclick="inputBox.value += '.'">.</button>
+          <button
+            onclick="inputBox.value = eval(inputBox.value)"
+            class="btn-grey"
+          >
+            =
+          </button>
         </div>
       </div>
     </div>
-
-    <script src="./script.js"></script>
   </body>
 </html>
 ```
