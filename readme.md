@@ -172,9 +172,3 @@ button {
   background: #27374d;
 }
 ```
-
-### JavaScript (`script.js`)
-
-```javascript
-
-```
